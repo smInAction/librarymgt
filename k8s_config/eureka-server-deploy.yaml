@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eureka-server-deploy
+  labels:
+    name: eureka-server-deploy
+    app: library-service-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: eureka-server-pod
+      app: library-service-app
+  template:
+    metadata:
+      name: eureka-server-pod  
+      labels:
+        name: eureka-server-pod
+        app: library-service-app
+    spec:
+      containers:
+        - name: eureka-server
+          image: localhost:5000/eureka-server:latest
+          ports:
+            - containerPort: 8761

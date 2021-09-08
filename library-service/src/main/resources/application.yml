@@ -1,0 +1,33 @@
+eureka:
+   client:
+      serviceUrl:
+         defaultZone: http://eureka-server:8761/eureka
+      instance:
+      preferIpAddress: true
+      registerWithEureka: true
+      fetchRegistry: true
+   instance:
+      instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+spring:
+   application:
+      name: library-service
+   cloud:
+      config:
+         name: library-service
+         uri: http://config-server:8888
+   jpa:
+      hibernate:
+         ddl-auto: update
+server:
+   port: 8081
+management:
+   endpoints:
+      web:
+         exposure:
+            include: "*"
+logging:
+   level:
+      root: INFO
+      org.springframework.web: INFO
+      org.springframework.security: INFO
+      org.springframework.security.oauth2: INFO

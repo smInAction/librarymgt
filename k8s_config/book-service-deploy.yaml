@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: book-service-deploy
+  labels:
+    name: book-service-deploy
+    app: library-service-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: book-service-pod
+      app: library-service-app
+  template:
+    metadata:
+      name: book-service-pod  
+      labels:
+        name: book-service-pod
+        app: library-service-app
+    spec:
+      containers:
+        - name: book-service
+          image: localhost:5000/book-service:latest
+          ports:
+            - containerPort: 8082

@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: config-server-deploy
+  labels:
+    name: config-server-deploy
+    app: library-service-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: config-server-pod
+      app: library-service-app
+  template:
+    metadata:
+      name: config-server-pod  
+      labels:
+        name: config-server-pod
+        app: library-service-app
+    spec:
+      containers:
+        - name: config-server
+          image: localhost:5000/config-server:latest
+          ports:
+            - containerPort: 8888

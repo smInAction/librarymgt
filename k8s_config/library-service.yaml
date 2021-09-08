@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: library-service-svc
+  labels:
+    name: library-service-svc
+    app: library-service-app
+spec:
+  type: NodePort
+  ports:
+    - name: http
+      port: 8084
+      targetPort: 8084
+      nodePort: 31001
+  selector:
+    name: library-service-pod
+    app: library-service-app

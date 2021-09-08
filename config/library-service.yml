@@ -1,5 +1,5 @@
 my:
-  greeting: Hello from config server
+  greeting: Hello from library service latest one
   list:
     values: one, two, three, four
 

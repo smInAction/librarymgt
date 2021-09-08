@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: library-service-deploy
+  labels:
+    name: library-service-deploy
+    app: library-service-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: library-service-pod
+      app: library-service-app
+  template:
+    metadata:
+      name: library-service-pod  
+      labels:
+        name: library-service-pod
+        app: library-service-app
+    spec:
+      containers:
+        - name: library-service
+          image: localhost:5000/library-service:latest
+          ports:
+            - containerPort: 8084

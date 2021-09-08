@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: book-service-svc
+  labels:
+    name: book-service-svc
+    app: library-service-app
+spec:
+  type: ClusterIP
+  ports:
+    - name: http
+      port: 8082
+      targetPort: 8082
+  selector:
+    name: book-service-pod
+    app: library-service-app
+  

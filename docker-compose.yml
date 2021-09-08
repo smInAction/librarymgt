@@ -1,0 +1,72 @@
+version: '2'
+services:
+    eureka-server:
+        container_name: eureka-server
+        build:
+            context: eureka-server
+            dockerfile: Dockerfile
+        image: eureka-server:latest
+        ports:
+            - 18761:8761
+        networks:
+            - spring-cloud-network
+    config-server:
+        container_name: config-server
+        build:
+            context: config-server
+            dockerfile: Dockerfile
+        image: config-server:latest
+        ports:
+            - 18888:8888
+        networks:
+            - spring-cloud-network
+    user-service:
+        container_name: user-service
+        build:
+            context: user-service
+            dockerfile: Dockerfile
+        image: user-service:latest
+        ports:
+            - 18083:8083
+        depends_on:
+            - eureka-server
+            - config-server
+            - zipkin            
+        networks:
+            - spring-cloud-network
+    book-service:
+        container_name: book-service
+        build:
+            context: book-service
+            dockerfile: Dockerfile
+        image: book-service:latest
+        ports:
+            - 18082:8082
+        depends_on:
+            - eureka-server
+            - config-server
+            - zipkin            
+        networks:
+            - spring-cloud-network
+    library-service:
+        container_name: library-service
+        build:
+            context: library-service
+            dockerfile: Dockerfile
+        image: library-service:latest
+        ports:
+            - 18081:8081
+        depends_on:
+            - eureka-server
+            - config-server
+            - zipkin            
+        networks:
+            - spring-cloud-network
+
+    zipkin:
+        image: openzipkin/zipkin
+        ports:
+            - 9411:9411
+networks:
+    spring-cloud-network:
+        driver: bridge

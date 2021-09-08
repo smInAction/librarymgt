@@ -1,0 +1,45 @@
+----------------------------------------------------------------
+Wed Jul 21 16:12:13 IST 2021:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-017a-c8a8-a365-00000a1d1cf0 
+on database directory memory:D:\microservices_learning\microservices_workspace\librarymgt\book-service\b49e7b90-46ac-4e80-b4e4-f94adc0276ae with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@11028347 
+Loaded from file:/C:/Users/Shalu_Malhotra/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=15.0.1+9-18
+user.dir=D:\microservices_learning\microservices_workspace\librarymgt\book-service
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Fri Jul 30 19:25:45 IST 2021:
+Shutting down instance a816c00e-017a-c8a8-a365-00000a1d1cf0 on database directory memory:D:\microservices_learning\microservices_workspace\librarymgt\book-service\b49e7b90-46ac-4e80-b4e4-f94adc0276ae with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@11028347 
+----------------------------------------------------------------
+Fri Jul 30 19:26:08 IST 2021:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance d46b80cd-017a-c8a8-a365-00000a1d1cf0 
+on database directory memory:D:\microservices_learning\microservices_workspace\librarymgt\book-service\04bb1870-18a6-4509-8577-d78d0b11b216 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@11028347 
+Loaded from file:/C:/Users/Shalu_Malhotra/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=15.0.1+9-18
+user.dir=D:\microservices_learning\microservices_workspace\librarymgt\book-service
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Fri Jul 30 19:26:22 IST 2021:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance e8f0c183-017a-c8a8-a365-00000a1d1cf0 
+on database directory memory:D:\microservices_learning\microservices_workspace\librarymgt\book-service\b0bbc7aa-664a-4bb2-ab8d-f5256722e665 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@11028347 
+Loaded from file:/C:/Users/Shalu_Malhotra/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=15.0.1+9-18
+user.dir=D:\microservices_learning\microservices_workspace\librarymgt\book-service
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Fri Jul 30 19:26:30 IST 2021:
+Shutting down instance e8f0c183-017a-c8a8-a365-00000a1d1cf0 on database directory memory:D:\microservices_learning\microservices_workspace\librarymgt\book-service\b0bbc7aa-664a-4bb2-ab8d-f5256722e665 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@11028347 

@@ -1,0 +1,27 @@
+eureka:
+   client:
+      serviceUrl:
+         defaultZone: http://eureka-server:8761/eureka
+      instance:
+      preferIpAddress: true
+      registerWithEureka: true
+      fetchRegistry: true
+   instance:
+      instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+spring:
+   application:
+      name: book-service
+   cloud:
+      config:
+         name: book-service
+         uri: http://config-server:8888
+   jpa:
+      hibernate:
+         ddl-auto: update
+   zipkin:
+      base-url: http://zipkin:9411
+   sleuth:
+      sampler:
+         probability: 1
+server:
+   port: 8082
