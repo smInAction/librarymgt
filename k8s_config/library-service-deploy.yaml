@@ -20,6 +20,7 @@ spec:
     spec:
       containers:
         - name: library-service
-          image: localhost:5000/library-service:latest
+          #image: localhost:5000/library-service:latest
+          image: smcontainerreg.azurecr.io/images/book-service
           ports:
             - containerPort: 8084
