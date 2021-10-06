@@ -20,6 +20,7 @@ spec:
     spec:
       containers:
         - name: eureka-server
-          image: localhost:5000/eureka-server:latest
+          #image: localhost:5000/eureka-server:latest
+          image: smcontainerreg.azurecr.io/images/book-service
           ports:
             - containerPort: 8761
